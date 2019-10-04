@@ -1,0 +1,126 @@
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>Sua Casa Em Todo Lugar</h1>
+
+</header>
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/Login">Login</a></li>
+    <li><a href="/PainelDeControle">Painel De Controle</a></li>
+    </ul>
+</nav>
+
+<article>
+  <h1>Estrutura</h1>
+
+<h2>
+
+  <h2>
+    <FORM action= /Lampadas method = GET>
+<!-- <FORM action= /Lampadas  method = post> retorna os dados porem nao pega os campos de preencimento-->
+<!-- <FORM action= /Lampadas  method = get> retorno os dados porem pelo navegador-->
+    <table border="1">
+    <tr>
+      <!--Faz 1º linha-->
+    <th>Local</th>
+    <th>Dispositivos</th>
+    <th>Estado</th>
+    <th>Alterar</th>
+    </tr>
+
+  <tr>
+    <td>Sala</td>
+    <td>Lampada</td>
+
+    {% if Comodo1LampadaEstado%}
+
+  <td>LigadaIF</td>
+
+  {%else%}
+
+  <td>DesligadaIF</td>
+
+
+  {% endif%}
+
+
+      <!--F<input name = username  type = text />-->
+      <td><INPUT TYPE="checkbox" NAME="Comodo1LampadaEstadoR" VALUE="MudarLampadas"></td>
+    </tr>
+
+    <tr>
+    <td>{{op1_checked}}</td>
+    <td>{{SaidaBD}}</td>
+    </tr>
+    </table>
+      <!--Botoes-->
+    <P>
+    <INPUT type="reset"  name="Limpar" value="Limpar">
+    <INPUT type="submit" name="Enviar" value="Enviar">
+        <input value= Login type = submit />
+    </P>
+    </FORM>
+
+    <FORM action= /Lampadas method = POST>
+
+      <td>{{Comodo1LampadaEstado}}</td>
+    </FORM>
+  </h2>
+
+</h2>
+
+
+  <p></p>
+</article>
+
+<footer>SuaCasaEmTodoLugar.com</footer>
+
+</div>
+
+</body>
+
